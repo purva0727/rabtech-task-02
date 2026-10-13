@@ -1,0 +1,163 @@
+/* Responsive Design Tokens */
+
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #0f172a;
+  --background-color: #f1f5f9;
+  --card-color: rgba(255, 255, 255, 0.85);
+  --text-color: #1e293b;
+  --muted-color: #64748b;
+
+  --font-family: Arial, sans-serif;
+  --font-small: 14px;
+  --font-medium: 16px;
+  --font-large: 24px;
+
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+
+  --radius-small: 8px;
+  --radius-large: 16px;
+
+  --shadow: 0 4px 16px rgba(15, 23, 42, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-medium);
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding: var(--spacing-medium);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-medium);
+}
+
+.card {
+  min-width: 0;
+  padding: var(--spacing-large);
+  background: var(--card-color);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
+}
+
+button {
+  padding: 10px 16px;
+  color: white;
+  background: var(--primary-color);
+  border: none;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+@media (min-width: 768px) {
+  .dashboard {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: var(--spacing-large);
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: var(--spacing-small);
+  }
+
+  .card {
+    padding: var(--spacing-medium);
+  }
+}
+/* Task 04: Responsive Design Tokens */
+
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #06b6d4;
+  --background-color: #f8fafc;
+  --surface-color: #ffffff;
+  --text-color: #1e293b;
+  --border-color: #e2e8f0;
+
+  --font-small: 14px;
+  --font-medium: 16px;
+  --font-large: 24px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+
+  --radius-small: 6px;
+  --radius-medium: 12px;
+  --radius-large: 20px;
+
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-size: var(--font-medium);
+  transition: background var(--transition-speed),
+              color var(--transition-speed);
+}
