@@ -88,10 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
       title.textContent = product.title;
 
       const price = document.createElement("p");
-      price.textContent = 'Price: $$ {product.price};'
+      price.textContent = 'Price: $$ {product.price}';
 
       const category = document.createElement("p");
-      category.textContent = 'Category: ${product.category};'
+      category.textContent = 'Category: ${product.category}';
 
       card.append(image, title, price, category);
       productsContainer.appendChild(card);
